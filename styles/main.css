@@ -1,0 +1,34 @@
+body {
+  font: Helvetica, sans-serif; 
+  background-image: url("../images/bglogin.jpeg");
+  background-size: cover; 
+  }
+
+/*# sourceMappingURL=main.css.map */
+
+.bg-form{
+  background: #033045; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(135deg, #0da8b6, #033045); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #0da8b6, #033045); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #0da8b6, #033045); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #0da8b6, #033045); /* Standard syntax */
+}
+#login{
+  position: relative;
+  top:100px;
+  padding: 25px;
+}
+#login .form-header{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+#login .form-header span{
+  width: 50%; /*Ensures that the border indicating the active tab is exactly half of its container*/
+  position: relative;
+  float: left;
+  color: #eee;
+  font-size: 28px;
+  text-align: center; /*Ensures that the text is center aligned*/
+  /*border-bottom: 2px #eee solid;*/
+}

@@ -1,0 +1,16 @@
+$font-stack:  Helvetica, sans-serif;
+$theme-color: ;
+
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius:    $radius;
+    -ms-border-radius:     $radius;
+    border-radius:         $radius;
+}
+
+#login{
+    margin-top: 100px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    background: 
+}
