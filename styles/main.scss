@@ -1,16 +1,76 @@
-$font-stack:  Helvetica, sans-serif;
-$theme-color: ;
+@import url('https://fonts.googleapis.com/css?family=Roboto|Dosis|Passion+One');
 
-@mixin border-radius($radius){
-    -webkit-border-radius: $radius;
-    -moz-border-radius:    $radius;
-    -ms-border-radius:     $radius;
-    border-radius:         $radius;
+$light-color: #0da8b6;
+$dark-color: #033045;
+$grad-angle: 135deg; 
+$header-font: 'Passion One', cursive;
+$body-font: 'Arial';
+
+*{ /*Smooth transition*/
+  transition: ease-out 1s;
 }
 
+body {
+  /*font: Helvetica, sans-serif;*/ 
+  background-image: url("../images/bglogin.jpeg");
+  background-size: cover; 
+  }
+
+
+.bg-form{
+  background: $dark-color; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($grad-angle, $light-color, $dark-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($grad-angle, $light-color, $dark-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($grad-angle, $light-color, $dark-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($grad-angle, $light-color, $dark-color); /* Standard syntax */
+}
 #login{
-    margin-top: 100px;
-    border: 1px solid #ccc;
-    padding: 30px;
-    background: 
+
+  position: relative;
+  top:100px;
+  padding: 25px;
+
+  .form-control/*Override Bootstrap default background color*/{
+    color: #fff;
+    background: transparent;
+    }
+  .form-header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
+    span{
+      text-align: center; /*Align text in center of div header*/
+      color: #eee;
+      font-family: $header-font;
+      font-size: 28pt;
+    }
+    }
+    ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder, ::-webkit-input-placeholder  { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  0.6;
+}
+}
+@media  screen and (min-width: 768px) and (max-width: 1092px){
+  #login{
+    .form-header{
+      span{
+        width:100%;
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+  }
+}
+@media  screen and (max-width: 465px){
+  #login{
+    .form-header{
+      span{
+        width:100%;
+        text-align: center;
+        margin-left: 0;
+        font-size: 22pt;
+      }
+    }
+  }
 }
